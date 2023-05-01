@@ -1,0 +1,345 @@
+@font-face {
+    font-family: "Inter";
+    src: url("./Inter-upright-var.woff2");
+}
+
+@keyframes showUnderline {
+    to {
+        width: 100%;
+        left: 0;
+    }
+}
+
+@keyframes showMenu {
+    from {
+        right: -500px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@keyframes hideMenu {
+    from {
+        right: 0;
+    }
+    to {
+        right: -500px;
+    }
+}
+
+@keyframes showShadow {
+    from {
+        background-color: #0000;
+        z-index: 2;
+    }
+    to {
+        background-color: #0003;
+        z-index: 2;
+    }
+}
+
+@keyframes hideShadow {
+    from {
+        background-color: #0003;
+        z-index: 2;
+    }
+    to {
+        background-color: #0000;
+        z-index: 2;
+    }
+}
+
+@keyframes moveShadowZ {
+    to {
+        z-index: -5;
+    }
+}
+
+
+html {
+    font-family: "Inter";
+    overflow-x: hidden;
+    background-image: url("./pictures/building.jpeg");
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center 30px;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+  
+#topContainer {
+    min-width: 700px;
+    width: 1000px;
+    height: 100px;
+    margin: 0px auto;
+    display: flex;
+    position: sticky;
+    padding-top: 10px;
+    top: 0px;
+    align-items: center;
+    background-color: white;
+    z-index: 1;
+}
+
+#main {
+    min-width: 700px;
+    width: 1000px;
+    margin: 40px auto 0 auto;
+    margin-top: 500px;
+    padding-bottom: 40px;
+    min-height: 1000px;
+    background-color: rgb(254, 236, 215);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+#main h1 {
+    width: 600px;
+    margin: 25px auto;
+    font-size: 65px;
+    text-align: center;
+}
+
+.whiteBck {
+    width: 100%;
+    background-color: white;
+    padding: 20px 0px;
+}
+
+#main .whiteBck h1{
+    margin: 40px auto;
+}
+
+#buildingPic {
+    margin: 0px auto;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    top: 110px;
+}
+
+.button {
+    display: inline-block;
+    width: max-content;
+    padding: 3px 7px;
+    color: brown;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button + .button {
+    margin-left: 15px;
+}
+
+#logo {
+    position: absolute;
+    left: 40px;
+    border: 2px solid black;
+    width: 250px;
+}
+
+#buttonsContainer {
+    display: inline-block;
+    width: max-content;
+    position: absolute;
+    right: 0px;
+}
+
+.gallery {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px auto;
+}
+
+.gallery img {
+    width: 400px;
+    margin: 0;
+}
+
+.gallery img+img {
+    margin-top: 20px;
+}
+
+#main p {
+    margin: 20px auto; 
+    width: 700px;
+    font-size: 24px;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#cocochanel {
+    width: 700px;
+    margin: 60px auto;
+}
+
+#cocochanel p {
+    font-size: 60px;
+    text-align: center;
+    font-family: "Inter";
+    color: brown;
+    margin: 0px;
+}
+
+#cocochanel p+p {
+    font-weight: lighter;
+    font-size: 45px;
+}
+
+#description::first-letter {
+    font-family: "Inter";
+    font-size: 110px;
+    font-weight: bolder;
+    color: brown;
+    float: left;
+}
+
+#main #booksyLink {
+    font-size: 20px;
+    font-family: "Inter";
+    color: white;
+    background-color: brown;
+    width: max-content;
+    height: max-content;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-decoration-style: none;
+    text-transform: uppercase;
+}
+
+#booksyLink:hover {
+    border: 1px solid brown;
+}
+
+#circleButtonContainer {
+    display: flex;
+    gap: 10px;
+    margin-left: 100px;
+}
+
+#circleButtonContainer .circleButton {
+    fill: white; 
+    background-color: brown;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#circleButtonContainer .circleButton svg {
+    transform: scale(1.5);
+}
+
+#bottom {
+    width: 1000px;
+    margin: 0px auto;
+    background-color: white;
+    padding-top: 40px;
+}
+
+#bottomLine {
+    display: flex;
+    padding: 15px 0px;
+    background-color: white;
+    justify-content: space-between;
+}
+
+#menu {
+    width: 500px;
+    height: max-content;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: -500px;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
+
+#menu #closeMenuButton {
+    font-size: 20px;
+    cursor: pointer;
+    text-align: right;
+    margin: 5px 10px 5px 0px;
+    border-bottom: 1px solid gray;
+}
+
+#menu #closeMenuButton::after {
+    content: "X";
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+#menu .button {
+    color: brown;
+    font-size: 25px;
+    height: max-content;
+    width: 100%;
+    padding: 10px 0px;
+    margin: 0px 20px;
+    border-radius: 0;
+    border: 0;
+    display: block;
+}
+#menu .button:hover {
+    text-decoration: underline;
+    background-color: unset;
+    cursor: pointer;
+}
+
+#menu .button+.button {
+    border-top: 1px solid gray;
+}
+
+.imp {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#shadow {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0000;
+    animation-fill-mode: forwards;
+    z-index: -5;
+}
+
+#topContainer .button {
+    position: relative;
+}
+
+.underline {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 0px;
+    left: 50%;
+    background-color: brown;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+#topContainer .button:hover .underline {
+    animation-name: "showUnderline";
+}

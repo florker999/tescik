@@ -1,5 +1,3 @@
-// ta da
-
 function aboutUs() {
     const root = document.createElement('div');
     root.id = 'root';

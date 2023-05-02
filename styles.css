@@ -56,7 +56,6 @@
     }
 }
 
-
 html {
     font-family: "Inter";
     overflow-x: hidden;
@@ -67,14 +66,34 @@ html {
     background-position: center 30px;
 }
 
+body {
+    margin: 0;
+}
+
 a {
     text-decoration: none;
     color: unset;
 }
+
+@media (min-width: 790px) {
+    #menuBtn {
+        display: none;
+    }
+}
+@media (max-width: 790px) {
+    #buttonsContainer .button {
+        display: none;
+    }
+    #buttonsContainer #menuBtn {
+        display: inline-block;
+        right: 100px;
+    }
+}
+
   
 #topContainer {
-    min-width: 700px;
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     height: 100px;
     margin: 0px auto;
     display: flex;
@@ -84,11 +103,19 @@ a {
     align-items: center;
     background-color: white;
     z-index: 1;
+    border-radius: 5px;
+}
+
+#logo {
+    position: relative;
+    display: inline-block;
+    left: 40px;
+    border: 2px solid black;
+    width: 250px;
 }
 
 #main {
-    min-width: 700px;
-    width: 1000px;
+    max-width: 1000px;
     margin: 40px auto 0 auto;
     margin-top: 500px;
     padding-bottom: 40px;
@@ -101,7 +128,7 @@ a {
 }
 
 #main h1 {
-    width: 600px;
+    max-width: 600px;
     margin: 25px auto;
     font-size: 65px;
     text-align: center;
@@ -120,7 +147,7 @@ a {
 #buildingPic {
     margin: 0px auto;
     display: block;
-    width: 1000px;
+    max-width: 1000px;
     position: absolute;
     top: 110px;
 }
@@ -139,16 +166,10 @@ a {
     margin-left: 15px;
 }
 
-#logo {
-    position: absolute;
-    left: 40px;
-    border: 2px solid black;
-    width: 250px;
-}
-
 #buttonsContainer {
     display: inline-block;
-    width: max-content;
+    width: calc(100% - 290px);
+    max-width: fit-content;
     position: absolute;
     right: 0px;
 }
@@ -248,7 +269,7 @@ a {
 }
 
 #bottom {
-    width: 1000px;
+    max-width: 1000px;
     margin: 0px auto;
     background-color: white;
     padding-top: 40px;

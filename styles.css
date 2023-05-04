@@ -12,7 +12,7 @@
 
 @keyframes showMenu {
     from {
-        right: -500px;
+        right: -480px;
     }
     to {
         right: 0;
@@ -24,7 +24,7 @@
         right: 0;
     }
     to {
-        right: -500px;
+        right: -480px;
     }
 }
 
@@ -171,7 +171,7 @@ a {
     width: calc(100% - 290px);
     max-width: fit-content;
     position: absolute;
-    right: 0px;
+    right: 15px;
 }
 
 .gallery {
@@ -283,12 +283,14 @@ a {
 }
 
 #menu {
-    width: 500px;
+    width: 450px;
     height: max-content;
+    border-radius: 5px;
     background-color: white;
     position: fixed;
+    padding: 5px 15px;
     top: 0;
-    right: -500px;
+    right: -480px;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
     z-index: 2;
@@ -302,6 +304,10 @@ a {
     border-bottom: 1px solid gray;
 }
 
+#menu #closeMenuButton:hover {
+    text-decoration: underline;
+}
+
 #menu #closeMenuButton::after {
     content: "X";
     cursor: pointer;
@@ -313,11 +319,12 @@ a {
     font-size: 25px;
     height: max-content;
     width: 100%;
-    padding: 10px 0px;
-    margin: 0px 20px;
+    margin: 0;
+    padding: 10px 0;
     border-radius: 0;
     border: 0;
     display: block;
+    text-align: end;
 }
 #menu .button:hover {
     text-decoration: underline;

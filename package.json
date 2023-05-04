@@ -1,0 +1,22 @@
+{
+  "name": "hairdresser_site",
+  "version": "1.0.0",
+  "description": "An excercise to recreate a website using pure HTML, CSS & JS",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/florker999/tescik.git"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "Maciej Gmur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/florker999/tescik/issues"
+  },
+  "homepage": "https://github.com/florker999/tescik#readme"
+}
